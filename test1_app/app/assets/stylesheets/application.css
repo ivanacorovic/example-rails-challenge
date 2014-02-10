@@ -1,0 +1,19 @@
+#failed{
+
+	background-color:  #FF0000;
+}
+
+#disputed {
+
+	background-color:  #FF5400;
+}
+
+td{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#successful{
+
+	background-color: yellow;
+}

@@ -1,0 +1,39 @@
+<div id="failed">
+<h1>Failed charges</h1>
+<table>
+  <thead>
+    <tr> 
+      <th>Created</th>
+      <th>Amount</th>
+      <th>Currency</th>
+      <th>Customer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @charges_failed 
+       @charges_failed.each do |charge| %>
+      <tr>
+        <td><%= charge.created_at%></td>
+        <td><%= charge.amount %></td>
+        <td><%= charge.currency %></td>
+        
+        <td><%=charge.customer.first_name %></td> 
+        <td><%=charge.customer.last_name %></td>
+        <!-- <td><%= link_to 'Show', charge %></td>
+        <td><%= link_to 'Edit', edit_charge_path(charge) %></td>
+        <td><%= link_to 'Destroy', charge, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <%end%>
+    <%end%>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
